@@ -1,0 +1,58 @@
+
+加一個 "config" 檔案: on C:\Documents and Settings\forward\.ssh\config
+config 內容 >>
+Host gitlab
+  HostName iisitelecom.no-ip.org
+  Port 2101
+  User git
+  IdentityFile "/c/Documents and Settings/forward/.ssh/forward@foopc2"
+-------------------------------------------------------------------------------
+安裝 Git Bash 並執行
+
+git clone gitlab:ocs/ocsg.git D:\OCS-OCSG\source-git
+
+加一個 ".gitignore" 檔案 besides ".git"
+
+cd /C/Users/user/git/ocsg/source/ocsg
+
+git status
+
+# create/delete branch
+git branch
+git branch xxx
+git branch -D xxx
+git checkout xxx  >> switch between master and branch
+# rename
+git branch -m old new
+
+# compare with master
+git diff
+git diff master
+
+# commit to local master
+cd ocsg-xxx >> 先切到正確目錄
+git checkout -- ocsg-cht/src/test/java/com/ericsson/ocsg/cht/service/ProvisionServiceTest.java >> discard this file
+git add . >> includes current path sub folders/files
+git commit -m "#201 message"
+# rollback for wrong message, ^ is times
+git reset HEAD^
+
+-------------------------------
+// push branch to remote
+git push origin xxx
+
+// delete branch and push
+git branch -D xxx
+git push origin :xxx
+
+# branch on master
+git checkout master
+git pull
+
+
+# branch on xxx
+git checkout xxx
+git merge master
+
+# http://www.scootersoftware.com/download.php
+git mergetool

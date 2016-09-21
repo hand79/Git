@@ -1,0 +1,29 @@
+window:
+利用notepad++ 
+開新檔輸入:
+.settings
+.project
+.gitignore
+.classpath
+target
+
+命名為>> .gitignore
+存檔時,選擇alltype
+-------------------------------------------------------------------
+linux:
+
+vim .gitignore
+
+編輯如下:
+
+.settings
+.project
+.gitignore
+.classpath
+target
+
+完成
+
+
+原則上, 放在與.git同層底下之後會忽略資料夾中的檔案
+ 
